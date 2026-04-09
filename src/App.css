@@ -1,0 +1,137 @@
+.app-shell {
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at top left, rgba(110, 168, 254, 0.16), transparent 28%),
+		radial-gradient(circle at top right, rgba(36, 89, 168, 0.12), transparent 26%),
+		#f6f8fc;
+}
+
+.app-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	padding: 1rem 1.5rem;
+	border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+	background: rgba(255, 255, 255, 0.82);
+	backdrop-filter: blur(12px);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.app-brand {
+	display: flex;
+	align-items: center;
+	gap: 0.9rem;
+	text-decoration: none;
+	color: inherit;
+}
+
+.app-logo {
+	height: 100px;
+	width: auto;
+	object-fit: contain;
+	display: block;
+}
+
+.app-brand-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.1;
+}
+
+.app-brand-text strong {
+	font-size: 1.05rem;
+}
+
+.app-brand-text small {
+	color: #4b5563;
+	font-size: 0.82rem;
+}
+
+.app-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: flex-end;
+}
+
+.app-nav-link {
+	padding: 0.55rem 0.9rem;
+	border-radius: 999px;
+	text-decoration: none;
+	color: #334155;
+	font-weight: 600;
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.app-nav-link:hover {
+	background: rgba(255, 196, 108, 0.22);
+	color: #8a5a00;
+	transform: translateY(-1px);
+}
+
+.app-nav-link.active {
+	background: #ffc46c;
+	color: #1f2937;
+}
+
+.app-content {
+	padding: 1.5rem;
+}
+
+/* Carousel styling */
+.carousel {
+	overflow: visible;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	width: 3rem;
+    height: 3rem;
+	background: rgba(180, 180, 180, 0.4);
+	border-radius: 8px;
+	opacity: 1;
+	transition: background-color 0.2s ease;
+}
+
+.carousel-control-prev {
+	left: -1.25rem;
+}
+
+.carousel-control-next {
+	right: -1.25rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+	background: #ffc46c;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-size: contain;
+	filter: brightness(0) saturate(100%) invert(20%);
+}
+
+@media (max-width: 720px) {
+	.app-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.app-nav {
+		justify-content: flex-start;
+	}
+
+	.carousel-control-prev {
+		left: -0.5rem;
+	}
+
+	.carousel-control-next {
+		right: -0.5rem;
+	}
+}

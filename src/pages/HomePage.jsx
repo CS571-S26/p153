@@ -7,12 +7,11 @@ export default function HomePage() {
 
   return (
     <div className="w-100 h-100 d-flex justify-content-center align-items-center">
-      <Card className='m-4 p-2'>
-        <Card.Body className='text-center'>
-          <h1>Hello World!</h1>
-          <Button onClick={() => setCount(o => o + 1)}>Count: {count}</Button>
-        </Card.Body>
-      </Card>
+      {/* <Card className='m-4 p-2'>
+        <Card.Body className='text-center'> */}
+          <h1>Beyond Taiwan</h1>
+        {/* </Card.Body>
+      </Card> */}
     </div>
   )
 }

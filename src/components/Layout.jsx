@@ -13,9 +13,11 @@ export default function Layout() {
           </span>
         </Link>
 
-        <Navbar className="app-nav" aria-label="Primary navigation">
-          <Nav className="ms-auto align-items-md-center gap-2">
-            <Nav.Link as={NavLink} to="/" end className={({ isActive }) => isActive ? 'app-nav-link active' : 'app-nav-link'}>
+        <Navbar expand="md" className="app-nav" aria-label="Primary navigation">
+          <Navbar.Toggle aria-controls="primary-navigation" />
+          <Navbar.Collapse id="primary-navigation">
+            <Nav className="ms-auto align-items-md-center gap-2">
+              <Nav.Link as={NavLink} to="/" end className={({ isActive }) => isActive ? 'app-nav-link active' : 'app-nav-link'}>
               Home
             </Nav.Link>
             <Nav.Link as={NavLink} to="/about" className={({ isActive }) => isActive ? 'app-nav-link active' : 'app-nav-link'}>
@@ -32,8 +34,8 @@ export default function Layout() {
             <Nav.Link as={NavLink} to="/mentorship-program" className={({ isActive }) => isActive ? 'app-nav-link active' : 'app-nav-link'}>
               Mentorship Program
             </Nav.Link>
-            
-          </Nav>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
       </header>
 

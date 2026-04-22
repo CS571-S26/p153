@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Alert } from 'react-bootstrap'
 
 export default function SignupForm({ roleLabel, buttonVariant }) {
 	const [formData, setFormData] = useState({
@@ -8,6 +8,7 @@ export default function SignupForm({ roleLabel, buttonVariant }) {
 		school: '',
 		notes: '',
 	})
+	const [submitted, setSubmitted] = useState(false)
 
 	const handleChange = (event) => {
 		const { name, value } = event.target
@@ -15,10 +16,21 @@ export default function SignupForm({ roleLabel, buttonVariant }) {
 			...current,
 			[name]: value,
 		}))
+		if (submitted) {
+			setSubmitted(false)
+		}
+	}
+
+	const handleSubmit = (event) => {
+		event.preventDefault()
+		setSubmitted(true)
 	}
 
 	return (
-		<Form className="mt-3">
+		<Form className="mt-3" onSubmit={handleSubmit}>
+			{submitted ? (
+				<Alert variant="success">Thanks for signing up as a {roleLabel}. We will contact you soon.</Alert>
+			) : null}
 			<Form.Group className="mb-3" controlId={`${roleLabel}-name`}>
 				<Form.Label>Name</Form.Label>
 				<Form.Control
@@ -27,6 +39,7 @@ export default function SignupForm({ roleLabel, buttonVariant }) {
 					value={formData.name}
 					onChange={handleChange}
 					placeholder="Enter your name"
+					required
 				/>
 			</Form.Group>
 
@@ -38,6 +51,7 @@ export default function SignupForm({ roleLabel, buttonVariant }) {
 					value={formData.email}
 					onChange={handleChange}
 					placeholder="Enter your email"
+					required
 				/>
 			</Form.Group>
 
@@ -49,6 +63,7 @@ export default function SignupForm({ roleLabel, buttonVariant }) {
 					value={formData.school}
 					onChange={handleChange}
 					placeholder="Enter your school"
+					required
 				/>
 			</Form.Group>
 

@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import { Container, Card, Row, Col, Form, Button } from 'react-bootstrap'
+import { Container, Card, Row, Col, Form, Button, Alert } from 'react-bootstrap'
 import PageHeader from '../components/PageHeader'
 
-export default function CurriculumnPage() {
+export default function CurriculumPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     role: '',
     notes: '',
   })
+  const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -16,13 +17,21 @@ export default function CurriculumnPage() {
       ...current,
       [name]: value,
     }))
+    if (submitted) {
+      setSubmitted(false)
+    }
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setSubmitted(true)
   }
 
   return (
     <Container className="py-4">
       <PageHeader
-        title="Curriculumn"
-        subtitle="Description of what curriculum team does"
+        title="Curriculum"
+        subtitle="Our curriculum team builds practical, student-friendly learning experiences."
       />
       <Card className="shadow-sm">
         <Card.Body>
@@ -37,10 +46,10 @@ export default function CurriculumnPage() {
             <Col md={7}>
               <h3 className="mb-3">2026 Summer Bootcamp</h3>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#4b5563' }}>
-                Description 
+                Join a weekend bootcamp focused on communication, project planning, and career readiness.
               </p>
-              <p>Date/Time: </p>
-              <p>Location: </p>
+              <p><strong>Date/Time:</strong> May 10, 2026, 1:00 PM - 4:30 PM</p>
+              <p><strong>Location:</strong> Engineering Hall 220</p>
             </Col>
           </Row>
         </Card.Body>
@@ -49,7 +58,10 @@ export default function CurriculumnPage() {
       <Card className="shadow-sm mt-4">
         <Card.Body>
           <h3 className="mb-3">Registration Form</h3>
-          <Form>
+          <Form onSubmit={handleSubmit}>
+            {submitted ? (
+              <Alert variant="success">You are registered. Check your email for a confirmation message.</Alert>
+            ) : null}
             <Row className="g-3">
               <Col md={6}>
                 <Form.Group controlId="curriculumName">
@@ -60,6 +72,7 @@ export default function CurriculumnPage() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your name"
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -72,6 +85,7 @@ export default function CurriculumnPage() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
+                    required
                   />
                 </Form.Group>
               </Col>

@@ -1,5 +1,5 @@
 import { Container } from 'react-bootstrap'
-import EventCarousel from '../components/EventCarousel'
+import EventCard from '../components/EventCard'
 import PageHeader from '../components/PageHeader'
 
 export default function CurrentEventsPage() {
@@ -48,7 +48,9 @@ export default function CurrentEventsPage() {
   return (
     <Container className="py-4">
       <PageHeader title="Past Events" subtitle="Browse previous events and highlights" />
-      <EventCarousel events={events} />
+      {events.map((event) => (
+        <EventCard key={event.id} event={event} variant="detailed" />
+      ))}
     </Container>
   )
 }

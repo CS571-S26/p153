@@ -2,6 +2,8 @@ import '../App.css'
 import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
+import StatsCounter from '../components/StatsCounter'
+import TestimonialCard from '../components/TestimonialCard'
 
 export default function HomePage() {
   return (
@@ -14,7 +16,7 @@ export default function HomePage() {
       <Card className="shadow-sm mb-4">
         <Card.Body>
           <h3 className="mb-3">What We Do</h3>
-          <p className="mb-3" style={{ color: '#4b5563', lineHeight: '1.7' }}>
+          <p className="mb-3" style={{ color: '#5A5A5A', lineHeight: '1.7' }}>
             We organize workshops, mentoring sessions, and campus events to help students build practical
             skills and stronger professional networks.
           </p>

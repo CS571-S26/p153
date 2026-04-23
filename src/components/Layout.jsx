@@ -1,5 +1,7 @@
 import { NavLink, Outlet, Link } from 'react-router-dom'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { SocialIcon } from 'react-social-icons'
+import Footer from './Footer'
 import '../App.css'
 
 export default function Layout() {
@@ -37,11 +39,49 @@ export default function Layout() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+
+        <div className="d-flex align-items-center gap-2">
+          <SocialIcon
+            url="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            fgColor="#ffffff"
+            bgColor="#E79A2E"
+          />
+          <SocialIcon
+            url="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            fgColor="#ffffff"
+            bgColor="#E79A2E"
+          />
+          <SocialIcon
+            url="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            fgColor="#ffffff"
+            bgColor="#E79A2E"
+          />
+          <SocialIcon
+            url="https://lin.ee/NmwIzZk"
+            network="line"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            fgColor="#ffffff"
+            bgColor="#E79A2E"
+          />
+        </div>
       </header>
 
       <main className="app-content">
         <Outlet />
       </main>
+
+      <Footer />
     </div>
   )
 }

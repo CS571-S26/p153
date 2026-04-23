@@ -7,7 +7,7 @@ export default function Layout() {
     <div className="app-shell">
       <header className="app-header">
         <Link to="/" className="app-brand" aria-label="Go to home page">
-          <img className="app-logo" src="public/logo.png" alt="Beyond Taiwan logo" />
+          <img className="app-logo" src="logo.png" alt="Beyond Taiwan logo" />
           <span className="app-brand-text">
             <strong>Beyond Taiwan</strong>
           </span>

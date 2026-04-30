@@ -1,4 +1,5 @@
 import { Container } from 'react-bootstrap'
+import { FaHistory } from 'react-icons/fa'
 import EventCard from '../components/EventCard'
 import PageHeader from '../components/PageHeader'
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Container, Card, Row, Col, Form, Button, Alert } from 'react-bootstrap'
+import { FaCalendarAlt, FaComments, FaClipboardList, FaCompass } from 'react-icons/fa'
 import PageHeader from '../components/PageHeader'
 import FAQSection from '../components/FAQSection'
 import StatsCounter from '../components/StatsCounter'
@@ -98,8 +99,8 @@ export default function CurriculumPage() {
             />
           </Col>
           <Col md={7}>
-            <h2 className="mb-3">2026 Summer Bootcamp</h2>
-            <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#5A5A5A' }}>
+            <h2 className="mb-3 title-with-icon"><FaCalendarAlt aria-hidden="true" /> 2026 Summer Bootcamp</h2>
+            <p style={{ fontSize: '1.05rem', lineHeight: '1.75', color: '#1f1f1f' }}>
               Join a weekend bootcamp to learn more abroad studying abroad and how to stand out in applications with speakers from across the world.
             </p>
             <p><strong>Date/Time:</strong> June 7, 2026, 9:00 AM - 5:00 PM</p>
@@ -113,7 +114,7 @@ export default function CurriculumPage() {
       <FAQSection items={faqItems} />
 
       <section className="mt-4">
-        <h2 className="mb-3">Attendee Feedback</h2>
+        <h2 className="mb-3 title-with-icon"><FaComments aria-hidden="true" /> Attendee Feedback</h2>
         <Row className="g-3">
           {testimonials.map((testimonial, index) => (
             <Col key={index} xs={12} md={4}>
@@ -125,7 +126,7 @@ export default function CurriculumPage() {
 
       <Card className="shadow-sm mt-4">
         <Card.Body>
-          <h2 className="mb-3">Registration Form</h2>
+          <h2 className="mb-3 title-with-icon"><FaClipboardList aria-hidden="true" /> Registration Form</h2>
           <Form onSubmit={handleSubmit}>
             {submitted ? (
               <Alert variant="success">You are registered. Check your email for a confirmation message.</Alert>

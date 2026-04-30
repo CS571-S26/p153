@@ -14,7 +14,7 @@ export default function TestimonialCard({ name, role, school, testimonial }) {
             </Card.Subtitle>
           </div>
         </div>
-        <Card.Text style={{ fontSize: '0.95rem', color: '#5A5A5A', lineHeight: '1.6' }}>
+        <Card.Text style={{ fontSize: '0.95rem', color: '#1f1f1f', lineHeight: '1.75' }}>
           "{testimonial}"
         </Card.Text>
       </Card.Body>

@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import '../App.css'
-import { Alert, Button, Card, Form } from 'react-bootstrap'
+import { Alert, Button, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { FaCalendarAlt, FaEnvelopeOpenText, FaHistory, FaInfoCircle, FaUserFriends, FaUsers } from 'react-icons/fa'
 import TestimonialCard from '../components/TestimonialCard'
+import FeatureTile from '../components/FeatureTile'
+import SectionTitle from '../components/SectionTitle'
+import ContentSection from '../components/ContentSection'
 
 export default function HomePage() {
   const [email, setEmail] = useState('')
@@ -37,48 +41,45 @@ export default function HomePage() {
 
   return (
     <>
-      <header className="home-hero-large py-5">
-        <div className="container text-center">
-          <h1 className="display-title">Beyond Taiwan</h1>
+      <header className="home-hero-large">
+        <div className="home-hero-media">
+          <img
+            className="home-hero-image"
+            src="hero.png"
+            alt="Students at a Beyond Taiwan event"
+          />
+          <h1 className="display-title home-hero-title">Beyond Taiwan</h1>
         </div>
       </header>
 
       <main className="home-page">
-        <section className="feature-tiles container py-5">
+        <ContentSection className="feature-tiles">
           <div className="row g-4">
-            <div className="col-12 col-md-4">
-              <Link to="/mentorship-program" className="feature-tile" style={{ backgroundImage: "url('mentorship.png')" }}>
-                <div className="feature-overlay">
-                  <h2>Mentorship Program</h2>
-                  <span className="btn btn-outline-light">Learn More</span>
-                </div>
-              </Link>
-            </div>
-
-            <div className="col-12 col-md-4">
-              <Link to="/events/curriculum" className="feature-tile" style={{ backgroundImage: "url('event2-1.png')" }}>
-                <div className="feature-overlay">
-                  <h2>Events</h2>
-                  <span className="btn btn-outline-light">Learn More</span>
-                </div>
-              </Link>
-            </div>
-
-            <div className="col-12 col-md-4">
-              <Link to="/about" className="feature-tile" style={{ backgroundImage: "url('event3-1.png')" }}>
-                <div className="feature-overlay">
-                  <h2>Past Events</h2>
-                  <span className="btn btn-outline-light">Learn More</span>
-                </div>
-              </Link>
-            </div>
+            <FeatureTile
+              to="/mentorship-program"
+              image="mentorship.png"
+              title="Mentorship Program"
+              icon={<FaUserFriends aria-hidden="true" />}
+            />
+            <FeatureTile
+              to="/events/curriculum"
+              image="event2-1.png"
+              title="Events"
+              icon={<FaCalendarAlt aria-hidden="true" />}
+            />
+            <FeatureTile
+              to="/events/pastevent"
+              image="event3-1.png"
+              title="Past Events"
+              icon={<FaHistory aria-hidden="true" />}
+            />
           </div>
-        </section>
+        </ContentSection>
 
-        <section className="container py-5 home-about-section">
+        <ContentSection className="home-about-section">
           <div className="row align-items-center g-4">
             <div className="col-12 col-lg-7">
-              <h2 className="home-section-title text-start">About Us</h2>
+              <SectionTitle className="text-start" icon={<FaInfoCircle aria-hidden="true" />}>About Us</SectionTitle>
               <p className="home-about-text">
                 Started by a group of enthusiastic and compassionate college students, Beyond Taiwan is a non-profit
                 organization dedicated to helping public high school students choose their own educational journey.
@@ -97,27 +98,27 @@ export default function HomePage() {
               <img className="home-about-logo" src="logo.png" alt="Beyond Taiwan logo" />
             </div>
           </div>
-        </section>
+        </ContentSection>
 
-        <section className="container py-5">
+        <ContentSection>
           <div className="row g-5">
             <div className="col-12 col-lg-6">
-              <h2 className="home-section-title text-center">Our Team</h2>
+              <SectionTitle className="text-center justify-content-center" icon={<FaUsers aria-hidden="true" />}>Our Team</SectionTitle>
               <div className="home-photo-frame">
                 <img src="team.jpeg" alt="Our team" className="home-photo-large" />
               </div>
             </div>
             <div className="col-12 col-lg-6">
-              <h2 className="home-section-title text-center">Our Mentee</h2>
+              <SectionTitle className="text-center justify-content-center" icon={<FaUserFriends aria-hidden="true" />}>Our Mentee</SectionTitle>
               <div className="home-photo-frame">
                 <img src="member.jpeg" alt="Our mentee" className="home-photo-large" />
               </div>
             </div>
           </div>
-        </section>
+        </ContentSection>
 
-        <section className="container py-5 home-feedback">
-          <h2 className="home-section-title text-center mb-4">Student Feedback</h2>
+        <ContentSection className="home-feedback">
+          <SectionTitle className="text-center mb-4 justify-content-center" icon={<FaUsers aria-hidden="true" />}>Student Feedback</SectionTitle>
           <div className="row g-3">
             {feedback.map((item) => (
               <div className="col-12 col-md-4" key={item.name}>
@@ -125,13 +126,13 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </section>
+        </ContentSection>
 
-        <section className="container py-5">
+        <ContentSection>
           <div className="home-mailing-list">
             <div className="row align-items-center g-4">
               <div className="col-12 col-lg-6">
-                <h2 className="home-section-title text-start mb-3">Join our mailing list</h2>
+                <SectionTitle className="text-start mb-3" icon={<FaEnvelopeOpenText aria-hidden="true" />}>Join our mailing list</SectionTitle>
                 <p className="home-about-text mb-0">
                   Get updates about upcoming mentorship cycles, events, and application tips delivered straight to your inbox.
                 </p>
@@ -165,7 +166,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </ContentSection>
       </main>
     </>
   )

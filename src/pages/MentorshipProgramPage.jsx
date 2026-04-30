@@ -1,4 +1,5 @@
 import { Card } from 'react-bootstrap'
+import { FaHandshake, FaRegComments, FaUserGraduate, FaUserTie } from 'react-icons/fa'
 import SignupForm from '../components/SignupForm'
 import PageHeader from '../components/PageHeader'
 import FAQSection from '../components/FAQSection'
@@ -80,7 +81,7 @@ export default function MentorshipProgramPage() {
 			<FAQSection items={faqItems} />
 
 			<section className="mt-4">
-				<h2 className="mb-3">Mentor & Mentee Feedback</h2>
+				<h2 className="mb-3 title-with-icon"><FaRegComments aria-hidden="true" /> Mentor & Mentee Feedback</h2>
 				<div className="row g-3">
 					{testimonials.map((testimonial, index) => (
 						<div key={index} className="col-12 col-md-4">
@@ -94,7 +95,7 @@ export default function MentorshipProgramPage() {
 				<div className="col-12 col-md-6">
 					<Card className="h-100">
 						<Card.Body className="d-flex flex-column">
-							<Card.Title>Becoming a Mentor</Card.Title>
+							<Card.Title className="title-with-icon"><FaUserTie aria-hidden="true" /> Becoming a Mentor</Card.Title>
 							<p className="text-muted">Guide students by sharing your experience and practical advice.</p>
 							<ul>
 								<li>Complete mentor profile</li>
@@ -109,7 +110,7 @@ export default function MentorshipProgramPage() {
 				<div className="col-12 col-md-6">
 					<Card className="h-100">
 						<Card.Body className="d-flex flex-column">
-							<Card.Title>Becoming a Mentee</Card.Title>
+							<Card.Title className="title-with-icon"><FaUserGraduate aria-hidden="true" /> Becoming a Mentee</Card.Title>
 							<p className="text-muted">Connect with mentors to receive support on academics and career growth.</p>
 							<ul>
 								<li>Complete mentee profile</li>

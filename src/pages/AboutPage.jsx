@@ -1,4 +1,5 @@
 import '../App.css'
+import { FaBookOpen, FaGlobeAmericas, FaUsers } from 'react-icons/fa'
 import PageHeader from '../components/PageHeader'
 import TeamSection from '../components/TeamSection'
 
@@ -84,14 +85,14 @@ export default function AboutPage() {
 
       <div className="w-100" style={{ maxWidth: '56rem' }}>
         <section className="mt-4">
-          <h2 className="mb-2">Our Belief</h2>
+          <h2 className="mb-2 title-with-icon"><FaBookOpen aria-hidden="true" /> Our Belief</h2>
           <p className="mb-4">
             We believe every student deserves the freedom to choose their own educational path.
           </p>
         </section>
 
         <section className="mt-2">
-          <h2 className="mb-2">Who are We?</h2>
+          <h2 className="mb-2 title-with-icon"><FaGlobeAmericas aria-hidden="true" /> Who are We?</h2>
           <p className="mb-3">
             We are a nonprofit founded by Taiwanese students studying at institutions around the world, united by a shared mission: to empower others to explore education beyond traditional boundaries. Through mentorship, institutional knowledge, and a supportive community, we help make alternative and non-traditional college pathways more accessible and less intimidating.
           </p>
@@ -100,7 +101,7 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <h2 className="mb-4 mt-5">Board Members</h2>
+        <h2 className="mb-4 mt-5 title-with-icon"><FaUsers aria-hidden="true" /> Board Members</h2>
         {Object.entries(teams).map(([teamName, members]) => (
           <TeamSection key={teamName} teamName={teamName} members={members} />
         ))}

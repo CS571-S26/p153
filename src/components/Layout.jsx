@@ -1,10 +1,17 @@
-import { NavLink, Outlet, Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink, Outlet, Link, useLocation } from 'react-router-dom'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { SocialIcon } from 'react-social-icons'
 import Footer from './Footer'
 import '../App.css'
 
 export default function Layout() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
+
   return (
     <div className="app-shell">
       <header className="app-header">
@@ -42,26 +49,26 @@ export default function Layout() {
 
         <div className="d-flex align-items-center gap-2">
           <SocialIcon
+            className="app-social-icon"
             url="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ height: 32, width: 32 }}
             fgColor="#1F1F1F"
             bgColor="#E79A2E"
           />
           <SocialIcon
+            className="app-social-icon"
             url="https://www.linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ height: 32, width: 32 }}
             fgColor="#1F1F1F"
             bgColor="#E79A2E"
           />
           <SocialIcon
+            className="app-social-icon"
             url="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ height: 32, width: 32 }}
             fgColor="#1F1F1F"
             bgColor="#E79A2E"
           />

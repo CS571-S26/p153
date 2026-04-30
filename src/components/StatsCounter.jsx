@@ -25,7 +25,7 @@ export default function StatsCounter({ stats = [] }) {
                 >
                   {stat.number}
                 </h2>
-                <p style={{ fontSize: '0.92rem', color: '#5A5A5A', margin: 0 }}>
+                <p style={{ fontSize: '0.92rem', color: '#1f1f1f', margin: 0, lineHeight: '1.65' }}>
                   {stat.label}
                 </p>
               </div>

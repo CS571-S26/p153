@@ -50,7 +50,7 @@ export default function Layout() {
         <div className="d-flex align-items-center gap-2">
           <SocialIcon
             className="app-social-icon"
-            url="https://www.instagram.com/"
+            url="https://www.instagram.com/beyondtaiwan/"
             target="_blank"
             rel="noopener noreferrer"
             fgColor="#1F1F1F"
@@ -58,7 +58,7 @@ export default function Layout() {
           />
           <SocialIcon
             className="app-social-icon"
-            url="https://www.linkedin.com/"
+            url="https://www.linkedin.com/company/beyond-taiwan/"
             target="_blank"
             rel="noopener noreferrer"
             fgColor="#1F1F1F"
@@ -66,7 +66,7 @@ export default function Layout() {
           />
           <SocialIcon
             className="app-social-icon"
-            url="https://www.facebook.com/"
+            url="https://www.facebook.com/beyondtaiwan2020"
             target="_blank"
             rel="noopener noreferrer"
             fgColor="#1F1F1F"

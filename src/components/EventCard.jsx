@@ -63,7 +63,7 @@ export default function EventCard({ event, variant = 'detailed' }) {
 
         <Col md={5} style={{ flex: '1 1 45%' }}>
           <div>
-            <h3 style={{ marginBottom: '1rem', color: '#E79A2E' }}>{event.title}</h3>
+            <h3 style={{ marginBottom: '1rem', color: '#8A5A12' }}>{event.title}</h3>
             <div style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
               <p>
                 <strong>Date:</strong> {event.date}

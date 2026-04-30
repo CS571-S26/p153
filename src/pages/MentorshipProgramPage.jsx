@@ -80,7 +80,7 @@ export default function MentorshipProgramPage() {
 			<FAQSection items={faqItems} />
 
 			<section className="mt-4">
-				<h3 className="mb-3">Mentor & Mentee Feedback</h3>
+				<h2 className="mb-3">Mentor & Mentee Feedback</h2>
 				<div className="row g-3">
 					{testimonials.map((testimonial, index) => (
 						<div key={index} className="col-12 col-md-4">

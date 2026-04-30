@@ -2,7 +2,7 @@ import { Card } from 'react-bootstrap'
 
 export default function TestimonialCard({ name, role, school, testimonial }) {
   return (
-    <Card className="h-100 shadow-sm" style={{ border: 'none', borderTop: '4px solid #E79A2E' }}>
+    <Card className="h-100 shadow-sm home-feedback-card" style={{ border: 'none', borderTop: '4px solid #E79A2E' }}>
       <Card.Body>
         <div className="mb-3">
           <div>

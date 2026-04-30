@@ -18,7 +18,7 @@ export default function StatsCounter({ stats = [] }) {
                   style={{
                     fontSize: '2rem',
                     fontWeight: 'bold',
-                    color: '#FFFFFF',
+                    color: '#1F1F1F',
                     lineHeight: 1.1,
                     marginBottom: '0.35rem',
                   }}

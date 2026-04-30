@@ -46,7 +46,7 @@ export default function Layout() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ height: 32, width: 32 }}
-            fgColor="#ffffff"
+            fgColor="#1F1F1F"
             bgColor="#E79A2E"
           />
           <SocialIcon
@@ -54,7 +54,7 @@ export default function Layout() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ height: 32, width: 32 }}
-            fgColor="#ffffff"
+            fgColor="#1F1F1F"
             bgColor="#E79A2E"
           />
           <SocialIcon
@@ -62,16 +62,7 @@ export default function Layout() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ height: 32, width: 32 }}
-            fgColor="#ffffff"
-            bgColor="#E79A2E"
-          />
-          <SocialIcon
-            url="https://lin.ee/NmwIzZk"
-            network="line"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ height: 32, width: 32 }}
-            fgColor="#ffffff"
+            fgColor="#1F1F1F"
             bgColor="#E79A2E"
           />
         </div>

@@ -92,15 +92,15 @@ export default function CurriculumPage() {
         <Row className="align-items-center g-4">
           <Col md={5}>
             <img
-              src="/flyer.png"
+              src="flyer.png"
               alt="Curriculum event flyer"
-              style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }}
+              style={{ width: '92%', maxWidth: '28rem', borderRadius: '12px', objectFit: 'cover', display: 'block', margin: '0 auto' }}
             />
           </Col>
           <Col md={7}>
-            <h3 className="mb-3">2026 Summer Bootcamp</h3>
+            <h2 className="mb-3">2026 Summer Bootcamp</h2>
             <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#5A5A5A' }}>
-              Join a weekend bootcamp focused on communication, project planning, and career readiness.
+              Join a weekend bootcamp to learn more abroad studying abroad and how to stand out in applications with speakers from across the world.
             </p>
             <p><strong>Date/Time:</strong> June 7, 2026, 9:00 AM - 5:00 PM</p>
             <p><strong>Location:</strong> TFG</p>
@@ -113,7 +113,7 @@ export default function CurriculumPage() {
       <FAQSection items={faqItems} />
 
       <section className="mt-4">
-        <h3 className="mb-3">Attendee Feedback</h3>
+        <h2 className="mb-3">Attendee Feedback</h2>
         <Row className="g-3">
           {testimonials.map((testimonial, index) => (
             <Col key={index} xs={12} md={4}>
@@ -125,7 +125,7 @@ export default function CurriculumPage() {
 
       <Card className="shadow-sm mt-4">
         <Card.Body>
-          <h3 className="mb-3">Registration Form</h3>
+          <h2 className="mb-3">Registration Form</h2>
           <Form onSubmit={handleSubmit}>
             {submitted ? (
               <Alert variant="success">You are registered. Check your email for a confirmation message.</Alert>

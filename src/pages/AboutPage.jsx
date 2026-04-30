@@ -9,13 +9,13 @@ export default function AboutPage() {
         name: 'Sarah Chen',
         title: 'Co-President',
         school: 'University of California, Berkeley',
-        image: 'https://via.placeholder.com/200?text=Sarah+Chen',
+        image: 'person2.webp',
       },
       {
         name: 'Alex Rodriguez',
         title: 'Co-President',
         school: 'New York University',
-        image: 'https://via.placeholder.com/200?text=Alex+Rodriguez',
+        image: 'person1.png',
       },
     ],
     Curriculum: [
@@ -23,13 +23,13 @@ export default function AboutPage() {
         name: 'Jamie Park',
         title: 'Curriculum Lead',
         school: 'University of Toronto',
-        image: 'https://via.placeholder.com/200?text=Jamie+Park',
+        image: 'person3.png',
       },
       {
         name: 'Taylor Smith',
         title: 'Curriculum Associate',
         school: 'University of Washington',
-        image: 'https://via.placeholder.com/200?text=Taylor+Smith',
+        image: 'person4.webp',
       },
     ],
     Mentorship: [
@@ -37,7 +37,7 @@ export default function AboutPage() {
         name: 'Jordan Lee',
         title: 'Mentorship Coordinator',
         school: 'University of Michigan',
-        image: 'https://via.placeholder.com/200?text=Jordan+Lee',
+        image: 'person5.jpeg',
       },
     ],
     Internship: [
@@ -45,13 +45,13 @@ export default function AboutPage() {
         name: 'Casey Martinez',
         title: 'Internship Program Lead',
         school: 'University of Southern California',
-        image: 'https://via.placeholder.com/200?text=Casey+Martinez',
+        image: 'person6.webp',
       },
       {
         name: 'Morgan Davis',
         title: 'Career Partnerships Associate',
         school: 'Boston University',
-        image: 'https://via.placeholder.com/200?text=Morgan+Davis',
+        image: 'person7.jpg',
       },
     ],
     Sponsorship: [
@@ -59,7 +59,7 @@ export default function AboutPage() {
         name: 'Riley Anderson',
         title: 'Sponsorship Lead',
         school: 'University of Illinois Urbana-Champaign',
-        image: 'https://via.placeholder.com/200?text=Riley+Anderson',
+        image: 'person8.webp',
       },
     ],
     Marketing: [
@@ -67,31 +67,31 @@ export default function AboutPage() {
         name: 'Blake Wilson',
         title: 'Marketing Lead',
         school: 'University of British Columbia',
-        image: 'https://via.placeholder.com/200?text=Blake+Wilson',
+        image: 'person9.webp',
       },
       {
         name: 'Drew Brown',
         title: 'Social Media Associate',
         school: 'University of Edinburgh',
-        image: 'https://via.placeholder.com/200?text=Drew+Brown',
+        image: 'person10.jpeg',
       },
     ],
   }
 
   return (
     <div className="w-100 d-flex flex-column align-items-center">
-      <PageHeader title="About BT"className="mt-2" />
+      <PageHeader title="About Beyond Taiwan" className="mt-2" />
 
       <div className="w-100" style={{ maxWidth: '56rem' }}>
         <section className="mt-4">
-          <h4 className="mb-2">Our Belief</h4>
+          <h2 className="mb-2">Our Belief</h2>
           <p className="mb-4">
             We believe every student deserves the freedom to choose their own educational path.
           </p>
         </section>
 
         <section className="mt-2">
-          <h4 className="mb-2">Who are We?</h4>
+          <h2 className="mb-2">Who are We?</h2>
           <p className="mb-3">
             We are a nonprofit founded by Taiwanese students studying at institutions around the world, united by a shared mission: to empower others to explore education beyond traditional boundaries. Through mentorship, institutional knowledge, and a supportive community, we help make alternative and non-traditional college pathways more accessible and less intimidating.
           </p>
@@ -100,7 +100,7 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <h3 className="mb-4 mt-5">Board Members</h3>
+        <h2 className="mb-4 mt-5">Board Members</h2>
         {Object.entries(teams).map(([teamName, members]) => (
           <TeamSection key={teamName} teamName={teamName} members={members} />
         ))}

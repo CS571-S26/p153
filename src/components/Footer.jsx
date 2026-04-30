@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { SocialIcon } from 'react-social-icons'
 import '../App.css'
 
 export default function Footer() {
@@ -22,57 +21,31 @@ export default function Footer() {
             <h5 className="mb-3">Quick Links</h5>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li className="mb-2">
-                <Link to="/" style={{ color: '#F2B65A', textDecoration: 'none' }}>
+                <Link to="/" style={{ color: '#FFD27A', textDecoration: 'none' }}>
                   Home
                 </Link>
               </li>
               <li className="mb-2">
-                <Link to="/about" style={{ color: '#F2B65A', textDecoration: 'none' }}>
+                <Link to="/about" style={{ color: '#FFD27A', textDecoration: 'none' }}>
                   About
                 </Link>
               </li>
               <li className="mb-2">
-                <Link to="/events/curriculum" style={{ color: '#F2B65A', textDecoration: 'none' }}>
+                <Link to="/events/curriculum" style={{ color: '#FFD27A', textDecoration: 'none' }}>
                   Curriculum
                 </Link>
               </li>
               <li>
-                <Link to="/mentorship-program" style={{ color: '#F2B65A', textDecoration: 'none' }}>
+                <Link to="/mentorship-program" style={{ color: '#FFD27A', textDecoration: 'none' }}>
                   Mentorship Program
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Social & Contact */}
+          {/* Contact */}
           <div className="col-12 col-md-4">
-            <h5 className="mb-3">Connect With Us</h5>
-            <div className="d-flex gap-2 mb-3">
-              <SocialIcon
-                url="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ height: 32, width: 32 }}
-                fgColor="#ffffff"
-                bgColor="#E79A2E"
-              />
-              <SocialIcon
-                url="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ height: 32, width: 32 }}
-                fgColor="#ffffff"
-                bgColor="#E79A2E"
-              />
-              <SocialIcon
-                url="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ height: 32, width: 32 }}
-                fgColor="#ffffff"
-                bgColor="#E79A2E"
-              />
-            </div>
+            <h5 className="mb-3">Contact</h5>
             <p style={{ fontSize: '0.9rem' }}>
               <strong>Email:</strong> contact@beyondtaiwan.org
             </p>
